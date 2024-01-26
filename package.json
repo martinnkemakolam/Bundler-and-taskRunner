@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "delete": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
+    "gulp-if": "^3.0.0",
+    "rollup": "^4.9.6"
   }
 }
