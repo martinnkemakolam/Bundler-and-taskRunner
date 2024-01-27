@@ -1,4 +1,4 @@
-const {series, parallel, src, dest} = require('gulp');
+const {series, parallel, src, dest, watch} = require('gulp');
 const gulpIf = require('gulp-if');
 const beautify = require('gulp-beautify');
 const del = require('delete');
@@ -37,4 +37,7 @@ exports.last = function (cb) {
     .pipe(gulpIf(isJS, beautify.js({indent_size: 7})))
     .pipe(beautify.html({indent_size: 0}))
     .pipe(dest('output'))
+}
+exports.watchTask = function(cb){
+    watch('*.html', {delay: 3000}, series('rollup'))
 }
